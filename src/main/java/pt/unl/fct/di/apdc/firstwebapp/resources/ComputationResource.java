@@ -28,9 +28,8 @@ public class ComputationResource {
 	@GET
 	@Path("/hello")
 	@Produces(MediaType.TEXT_PLAIN)
-	public Response hello() {
-		LOG.fine("Saying hello!!");
-		return Response.ok().entity("Hello human! I hope you are having a fine day.").build();
+	public Response hello() throws IOException{
+		throw new IOException("UPS");
 	}
 	
 	@GET
